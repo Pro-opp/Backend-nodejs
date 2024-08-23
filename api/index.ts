@@ -17,10 +17,12 @@ connect()
     app.on("error" , (err : Error) => {
         console.log(err)
     });
-    app.get('/' , (req : any , res : any) => {
-        res.send({status : 'connected'})
-    })
 })
 .catch((err : Error) => {
     console.log(`Failed to connect the databse : ${err}`)
+})
+
+
+app.get('/' , (req : any , res : any) => {
+    res.send({status : 'connected'})
 })
