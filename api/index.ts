@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
-import { connect } from "./db/index.js";
-import { app } from './app.ts'
+import { connect } from './db/index'
+import { app } from './app';
 
 dotenv.config({
     path : './env'
@@ -14,13 +14,13 @@ connect()
     app.listen(PORT , () => {
         console.log(`Server is Listening on port ${PORT}`)
     });
-    app.on("error" , (err) => {
+    app.on("error" , (err : Error) => {
         console.log(err)
     });
-    app.get('/' , (req  , res) => {
+    app.get('/' , (req : any , res : any) => {
         res.send({status : 'connected'})
     })
 })
-.catch((err) => {
+.catch((err : Error) => {
     console.log(`Failed to connect the databse : ${err}`)
 })

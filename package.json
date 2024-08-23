@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "backend in nodejs and express",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "nodemon -r dotenv/config  api/index.ts"
   },
