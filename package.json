@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon -r dotenv/config  api/index.js"
+    "dev": "nodemon -r dotenv/config  api/index.ts"
   },
   "keywords": [
     "backend",
@@ -16,7 +16,9 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.1.4",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
   },
   "dependencies": {
     "cookie-parser": "^1.4.6",

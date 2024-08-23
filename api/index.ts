@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 import { connect } from "./db/index.js";
-import { app } from './app.js';
+import { app } from './app.ts'
 
 dotenv.config({
     path : './env'
@@ -17,7 +17,7 @@ connect()
     app.on("error" , (err) => {
         console.log(err)
     });
-    app.get('/' , (req , res) => {
+    app.get('/' , (req  , res) => {
         res.send({status : 'connected'})
     })
 })
